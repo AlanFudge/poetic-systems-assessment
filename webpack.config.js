@@ -36,7 +36,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
-            template: './templates/index.html'
+            template: './public/index.html'
         })
     ]
 }
