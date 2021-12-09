@@ -4,6 +4,7 @@ This assessment was given by poetic systems as part of their interview process
 
 ## Requirements
 
+- A ReactJS app
 - Has a router
 - Displays businesses by distance from my zip code
 - View the business
