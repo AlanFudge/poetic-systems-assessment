@@ -6,6 +6,7 @@ import { getBusiness } from "./businessSlice";
 export default function BusinessDetails() {
     const dispatch = useDispatch();
     const { businessId } = useParams();
+    
     useEffect(() => {
         dispatch(getBusiness(businessId));
     }, [dispatch]);
