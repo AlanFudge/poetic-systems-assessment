@@ -8,7 +8,7 @@ export default function BusinessDetails() {
     const { businessId } = useParams();
     useEffect(() => {
         dispatch(getBusiness(businessId));
-    });
+    }, [dispatch]);
 
     return (
         <>
