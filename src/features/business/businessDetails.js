@@ -23,7 +23,7 @@ export default function BusinessDetails() {
     return (
         <>
             <div className="nav-back">
-                    <p onClick={() => navigate(-1)}><span>{'<'}</span> Go Back To Search</p>
+                    <p onClick={() => navigate(-1)}><span>{'<'}</span> Go Back</p>
             </div>
             {
                 business.status === 'success'
