@@ -1,0 +1,62 @@
+.review-form {
+    @extend %box-shadow;
+    position: relative;
+    top: 100px;
+    margin-left: 25%;
+    width: 50%;
+    height: 70vh;
+    border-radius: 20px;
+    border: 1px solid #c4c4c4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        h1 {
+            display: inline-block;
+            margin: 20px;
+        }
+    
+        input[type="range"] {
+            margin: 20px;
+            width: 75%;
+        }
+    }
+
+
+    textarea {
+        border: 1px solid #c4c4c4;
+        height: 100%;
+        width: calc(100% - 80px);
+        margin: 20px;
+        text-align: start;
+        text-justify: ceil($number: 0);
+        font-size: 18px;
+        resize: none;
+        padding: 20px;
+    }
+
+    button {
+        border: none;
+        border-radius: 20px;
+        background-color: #71BBFF;
+        height: 60px;
+        width: 50%;
+        font-size: 25px;
+        margin: 20px
+    }
+}
+
+.submitting {
+    position: relative;
+    text-align: center;
+    top: 130px;
+}
