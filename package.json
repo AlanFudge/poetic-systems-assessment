@@ -7,6 +7,14 @@
     "build": "webpack --mode production",
     "start": "webpack serve --mode development"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlanFudge/poetic-systems-assessment.git"
+  },
+  "homepage": "https://alanfudge.github.io/poetic-systems-assessment",
+  "bugs": {
+    "url": "https://github.com/AlanFudge/poetic-systems-assessment/issues"
+  },
   "keywords": [],
   "author": "Alan Fudge",
   "dependencies": {
