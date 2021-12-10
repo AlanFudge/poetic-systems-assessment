@@ -8,8 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
-        // turn off for deploy
-        // publicPath: '/'
+        publicPath: './'
     },
     module: {
         rules: [
