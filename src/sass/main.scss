@@ -1,7 +1,11 @@
+@import 'helpers/placeholders';
 @import 'components/appHome.scss';
 @import 'components/searchBar.scss';
+@import 'components/searchResults.scss';
+@import 'components/searchItem.scss';
 
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
