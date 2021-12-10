@@ -9,7 +9,7 @@ import '../sass/main.scss';
 
 export default function App() {
     return (
-        <Router basename='/'>
+        <Router basename='/poetic-systems-assessment'>
             <Routes>
                 <Route path='/' element={<AppHome />} />
                 <Route path='/search' element={<SearchResults />} />
