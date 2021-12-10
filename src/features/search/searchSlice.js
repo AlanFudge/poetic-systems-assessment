@@ -5,7 +5,7 @@ export const getSearchResults = createAsyncThunk('search/getSearchResults', asyn
     if (sortBy === null) sortBy = 'distance';
     let queryURL = `https://assorted-cultured-hearing.glitch.me/search?sort_by=${sortBy}`;
     if (location) queryURL += `&location=${location}`;
-    if (term) queryURL += `&location=${term}`;
+    if (term) queryURL += `&term=${term}`;
 
     return fetch(queryURL).then(res => res.json());
 }
