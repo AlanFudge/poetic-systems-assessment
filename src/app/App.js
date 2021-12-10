@@ -11,8 +11,8 @@ export default function App() {
         <Router basename='/'>
             <Routes>
                 <Route path='/' element={<AppHome />} />
-                <Route path='/business/:businessId' element={<BusinessDetails />} />
                 <Route path='/search' element={<SearchResults />} />
+                <Route path='/business/:businessId' element={<BusinessDetails />} />
             </Routes>
         </Router>
     );
