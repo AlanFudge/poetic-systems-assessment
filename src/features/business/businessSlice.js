@@ -1,8 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getBusiness = createAsyncThunk('business/getBusiness', async (businessId) => {
-        return fetch(`https://assorted-cultured-hearing.glitch.me/businesses/${businessId}`).then(res => res.json());
-    }
+    return fetch(`https://assorted-cultured-hearing.glitch.me/businesses/${businessId}`).then(res => res.json());
+}
 );
 
 const initialState = {
@@ -13,6 +13,11 @@ const initialState = {
 const businessSlice = createSlice({
     name: 'business',
     initialState,
+    reducers: {
+        resetBusiness(state, action) {
+            return initialState;
+        }
+    },
     extraReducers: {
         [getBusiness.pending]: (state, action) => {
             state.status = 'loading';
@@ -27,4 +32,6 @@ const businessSlice = createSlice({
     }
 });
 
+export const selectBusiness = (state) => state.business;
+export const { resetBusiness } = businessSlice.actions;
 export default businessSlice.reducer;
