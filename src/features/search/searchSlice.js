@@ -33,4 +33,5 @@ const searchSlice = createSlice({
     }
 });
 
+export const selectSearchResults = (state) => state.search;
 export default searchSlice.reducer;

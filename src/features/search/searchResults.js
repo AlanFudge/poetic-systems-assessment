@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { getSearchResults } from "./searchSlice";
-import SearchBar from './../../components/searchBar';
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
+import { getSearchResults, selectSearchResults } from "./searchSlice";
 import SearchItem from "../../components/searchItem";
 
 function useQuery() {
@@ -17,6 +16,8 @@ export default function SearchResults() {
     const term = query.get('term');
     const sortBy = query.get('sortBy');
     const dispatch = useDispatch();
+    const search = useSelector(selectSearchResults);
+
 
     useEffect(() => {
         dispatch(getSearchResults({ location, term, sortBy }));
@@ -24,17 +25,20 @@ export default function SearchResults() {
 
     return (
         <>
-            <SearchBar { ...{ location, term, sortBy }} />
-            <h1>Search Results</h1>
-            <p>this is the search results component that at the top will render a SearchBar</p>
-            <p>Below is the list of query params</p>
-            <ul>
-                <li>location: {location}</li>
-                <li>term: {term}</li>
-                <li>sortBy: {sortBy}</li>
-            </ul>
-            <p>This component will render a list of searchItems</p>
-            <SearchItem />
+            <div className="nav-back">
+                <Link to='/'>
+                    <p><span>{'<'}</span> Go Back To Home</p>
+                </Link>
+            </div>
+            <div className="search-results">
+                {
+                    search.status === 'success'
+                        ?
+                        search.searchResults.businesses.map(result => <SearchItem key={result.id} {...result} />)
+                        :
+                        <p className="loading-animation">Loading...</p>
+                }
+            </div>
         </>
     )
 }
