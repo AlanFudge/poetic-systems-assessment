@@ -1,4 +1,4 @@
-# Poetic Systems Coding Assessment
+# Yelp Clone Assessment
 
 This assessment was given by poetic systems as part of their interview process
 
