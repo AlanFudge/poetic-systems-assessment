@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlanFudge/poetic-systems-assessment.git"
+    "url": "git+https://github.com/AlanFudge/yelp-clone.git"
   },
-  "homepage": "https://alanfudge.github.io/poetic-systems-assessment",
+  "homepage": "https://alanfudge.github.io/yelp-clone",
   "bugs": {
-    "url": "https://github.com/AlanFudge/poetic-systems-assessment/issues"
+    "url": "https://github.com/AlanFudge/yelp-clone/issues"
   },
   "keywords": [],
   "author": "Alan Fudge",
